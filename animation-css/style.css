@@ -1,0 +1,51 @@
+section{
+  height: 100vh;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+div{
+  background: green;
+  height: 100%;
+  width: 100%;
+}
+.fadeInLeft{
+  background-color: red;
+}
+
+/* animation class */
+.fadeIn {
+  opacity: 0;
+  will-change: opacity;
+}
+.fadeInLeft {
+  transform: translateX(100px);
+  will-change: transform;
+}
+
+.fadeIn.animate {
+  animation-name: fadeIn;
+}
+.fadeInLeft.animate {
+  animation-name: fadeInLeft;
+}
+
+.animate {
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}
+@keyframes fadeInLeft {
+  from { transform: translateX(100px); }
+  to { transform: translateX(0); }
+}

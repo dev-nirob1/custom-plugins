@@ -1,4 +1,4 @@
-const animatedElements = document.querySelectorAll(".fadeIn, .fadeInLeft");
+const animatedElements = document.querySelectorAll(".fadeIn, .fadeInLeft, .fadeInRight, .fadeInUp");
 
 const observer = new IntersectionObserver(
   (entries) => {

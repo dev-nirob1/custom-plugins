@@ -27,6 +27,14 @@ div{
   transform: translateX(100px);
   will-change: transform;
 }
+.fadeInRight {
+  transform: translateX(-100px);
+  will-change: transform;
+}
+.fadeInUp {
+  transform: translateY(50px);
+  will-change: transform;
+}
 
 .fadeIn.animate {
   animation-name: fadeIn;
@@ -34,9 +42,15 @@ div{
 .fadeInLeft.animate {
   animation-name: fadeInLeft;
 }
+.fadeInRight.animate {
+  animation-name: fadeInRight;
+}
+.fadeInUp.animate {
+  animation-name: fadeInUp;
+}
 
 .animate {
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
 }
@@ -48,4 +62,12 @@ div{
 @keyframes fadeInLeft {
   from { transform: translateX(100px); }
   to { transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  from { transform: translateX(-100px); }
+  to { transform: translateX(0); }
+}
+@keyframes fadeInUp {
+  from { transform: translateY(50px); }
+  to { transform: translateY(0); }
 }
